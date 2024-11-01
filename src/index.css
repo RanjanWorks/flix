@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+body {
+  min-height: 100vh;
+  background: url(https://img.freepik.com/premium-photo/purple-abstract-background_1278706-65702.jpg?w=1060) no-repeat center center/cover;
+  background-position: fixed;
+}
+
+::-webkit-scrollbar {
+  width: 5px !important;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0F172A;
+  border-radius: 4px 5px;
+}
