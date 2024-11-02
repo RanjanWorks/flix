@@ -83,7 +83,7 @@ export default function MovieDetails() {
         behavior: 'smooth', 
       });
     }, [id]); 
-    
+
   
   const handleShare = async () => {
     if (navigator.share && movie) {
@@ -133,11 +133,11 @@ export default function MovieDetails() {
   return (
     <>
       <Helmet>
-        <title>{movie.title} - Movie Details</title>
+        <title>{movie.title}</title>
         <meta name="description" content={movie.overview} />
         <meta property="og:title" content={movie.title} />
         <meta property="og:description" content={movie.overview} />
-        <meta property="og:image" content={`https://image.tmdb.org/t/p/w500/${movie.poster_path}`} />
+        <meta property="og:image" content={`https://image.tmdb.org/t/p/w500/${movie.backdrop_path}`} />
         <meta property="og:url" content={window.location.href} />
         <meta name="twitter:card" content="summary_large_image" />
       </Helmet>
@@ -222,7 +222,7 @@ export default function MovieDetails() {
         </DialogContent>
       </Dialog>
       
-      <div className="p-5 grid grid-cols-1 lg:grid-cols-4 gap-5 mt-10 text-white">
+      <div className="p-5 grid grid-cols-3 lg:grid-cols-5 gap-5 mt-10 text-white">
         <h1 className="lg:col-span-4 text-3xl font-semibold text-center">Related Movies</h1>
         {relatedMovies.map((movie) => (
           <Card key={movie.id} movie={movie} />
