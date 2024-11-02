@@ -222,8 +222,8 @@ export default function MovieDetails() {
         </DialogContent>
       </Dialog>
       
-      <div className="p-5 grid grid-cols-3 lg:grid-cols-5 gap-5 mt-10 text-white">
         <h1 className="lg:col-span-4 text-3xl font-semibold text-center">Related Movies</h1>
+      <div className="p-5 grid grid-cols-3 lg:grid-cols-5 gap-5 mt-10 text-white">
         {relatedMovies.map((movie) => (
           <Card key={movie.id} movie={movie} />
         ))}
