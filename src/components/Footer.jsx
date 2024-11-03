@@ -3,7 +3,7 @@ import { FaGithub, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-900 text-white py-8 px-4 mt-10">
+    <footer className="bg-gray-900 text-white py-8 px-4 mt-10 sticky">
       <div className="container mx-auto flex flex-col items-center justify-center space-y-4">
         <h1 className="text-lg font-semibold">Connect with me</h1>
         
