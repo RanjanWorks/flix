@@ -15,7 +15,7 @@ const Header = () => {
          <NavLink  to="/">Home</NavLink>
         </div>
 
-      </div>
+      </div> 
 
     </>
   );

@@ -4,7 +4,6 @@ import axios from "axios";
 import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { TbExternalLink } from "react-icons/tb";
-import { Helmet } from "react-helmet";
 import Card from "./Card";
 import {
   Dialog,
@@ -130,7 +129,7 @@ export default function MovieDetails() {
               highlightColor="#0F172A"
             />
           </div>
-          <div className="flex flex-col gap-3 col-span-2">
+          <div className="flex flex-col gap-3 lg:col-span-2">
             <Skeleton
               width="70%"
               height={40}
