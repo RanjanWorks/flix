@@ -15,6 +15,7 @@ import {
 } from "@mui/material";
 import { MdShare } from "react-icons/md";
 import { MdVideoLibrary } from "react-icons/md";
+import SEO from "./Seo";
 
 export default function MovieDetails() {
   const { id } = useParams();
@@ -176,22 +177,12 @@ export default function MovieDetails() {
 
   return (
     <>
-      {movie && (
-        <Helmet>
-          <title>{movie.title}</title>
-          <meta name="description" content={movie.overview} />
-          <meta property="og:title" content={movie.title} />
-          <meta property="og:description" content={movie.overview} />
-          <meta property="og:type" content="video.movie" />
-          <meta
-            property="og:image"
-            content={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`}
-          />
-          <meta property="og:url" content={window.location.href} />
-          <meta name="twitter:card" content="photo" />
-        </Helmet>
-      )}
-
+      <SEO 
+        title={movie.title} 
+        description={movie.overview} 
+        image={`https://image.tmdb.org/t/p/w780/${movie.backdrop_path}`} 
+        url={window.location.href} 
+      />
       <div
         style={{
           backgroundImage: `url(https://image.tmdb.org/t/p/w780/${movie.backdrop_path})`,

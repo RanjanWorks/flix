@@ -4,7 +4,7 @@ import axios from "axios";
 import Search from "./SearchBox";
 import Card from "./Card";
 import Skeleton from "react-loading-skeleton"; // Import Skeleton
-import { Helmet } from "react-helmet";
+import SEO from "./Seo";
 
 const SkeletonCard = () => (
   <div className="bg-gray-800 rounded-lg p-4 animate-pulse">
@@ -57,37 +57,7 @@ const Home = () => {
   }
   return (
     <>
-      <Helmet>
-        <title>Ranjan's Flix</title>
-        <meta
-          name="description"
-          content="Free Movie Downloads | Download Movies Online | Movie Downloader | Best Movie Download Site"
-        />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Ranjan's Flix" />
-        <meta
-          property="og:description"
-          content="Free Movie Downloads | Download Movies Online | Movie Downloader | Best Movie Download Site"
-        />
-        <meta
-          property="og:image"
-          content="https://opengraph.b-cdn.net/production/images/06254822-67bc-4bbb-ab08-95bd363a2de5.png?token=xYcYh95vsTwp3oycYg8m3kYHFFl4MAvrlrOo-nCSGz8&height=600&width=1200&expires=33266469698"
-        />
-        <meta
-          name="twitter:image"
-          content="https://opengraph.b-cdn.net/production/images/1f14e801-e42c-4107-b410-c9f134fb6c9c.jpg?token=wXko6JZJJ2JcUWNYWJUYVs-2kTCo0ismJHKXuajpVFk&height=800&width=1200&expires=33266639930"
-        />
-        <meta name="twitter:card" content="photo" />
-        <meta name="twitter:title" content="Ranjan's Flix" />
-        <meta
-          name="twitter:description"
-          content="Free Movie Downloads | Download Movies Online | Movie Downloader | Best Movie Download Site"
-        />
-        <meta
-          name="twitter:image"
-          content="https://opengraph.b-cdn.net/production/images/06254822-67bc-4bbb-ab08-95bd363a2de5.png?token=xYcYh95vsTwp3oycYg8m3kYHFFl4MAvrlrOo-nCSGz8&height=600&width=1200&expires=33266469698"
-        />
-      </Helmet>
+      <SEO />
       <div className="flex flex-col items-center justify-center text-center gap-2 py-10 px-4 sm:px-8 lg:px-16 mt-10">
         <div className="w-full sm:w-3/4 md:w-2/3 lg:w-1/2 flex flex-col gap-3">
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white">
